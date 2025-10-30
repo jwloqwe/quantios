@@ -17,9 +17,9 @@ jobs:
         run: npm ci
       - name: Create .env file
         run: |
-          echo "BASE_URL=$ {{ secrets.BASE_URL }}" >> .env
-          echo "Q_USERNAME=$ {{ secrets.Q_USERNAME }}" >> .env
-          echo "Q_PASSWORD=$ {{ secrets.Q_PASSWORD }}" >> .env
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "Q_USERNAME=${{ secrets.Q_USERNAME }}" >> .env
+          echo "Q_PASSWORD=${{ secrets.Q_PASSWORD }}" >> .env
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
