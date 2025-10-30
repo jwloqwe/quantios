@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Login Flow', () => {
     test('Register then Login', async ({ page }) => {
         // Access the site and make sure that the Title of the Page is correct
-        await page.goto('');
+        await page.goto(process.env.BASE_URL!);
         expect(page).toHaveTitle('Login Page');
     
         // Look for the link with the 'Create New User' label
