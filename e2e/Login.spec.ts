@@ -10,7 +10,7 @@ test.describe('Login Flow', () => {
         await page.getByRole('link', { name: 'Create new user' }).click();
 
         // Ensure that the page is present
-        expect(page).toHaveURL('/register');
+        expect(page).toHaveURL('/register/');
         await page.waitForSelector('#registerForm');
         
         // Expect that the Button is Disabled
